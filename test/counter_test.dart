@@ -29,7 +29,7 @@ main() {
         () {
       counter.incrementCount();
       counter.reset();
-      expect(counter.count, 0);
+      expect(counter.count, 0 );
     });
   });
 }

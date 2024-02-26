@@ -14,6 +14,6 @@ class Counter {
   }
 
   void reset() {
-    throw UnimplementedError();
+    _count = 0;
   }
 }
