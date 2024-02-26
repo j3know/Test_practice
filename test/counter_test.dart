@@ -12,18 +12,37 @@ main() {
       expect(count, 0);
     });
     test(
-        'Given Counter class is increment when increment is calles then count = 1',
+        'Given Counter class is increment when increment is calles then count = 1 ',
         () {
       counter.incrementCount();
       expect(counter.count, 1);
     });
 
-    test(
-        'Given Counter class is instantiated when dicrement count is called, then counter = -1',
+     test(
+        'Given Counter class is increment when increment is calles then count = 1 , 3 ,6 , 10 ',
+        () {
+      counter.incrementCount();
+      expect(counter.count, 1);
+
+         counter.incrementCount();
+      expect(counter.count, 3);
+
+         counter.incrementCount();
+      expect(counter.count, 6);
+
+         counter.incrementCount();
+      expect(counter.count, 10);
+    });
+
+
+
+       test(
+        'Given Counter class is instantiated when decrement count is called and when count is zero then decrement will stop, then counter = 0',
         () {
       counter.decrementCount();
-      expect(counter.count, -1);
+      expect(counter.count, 0);
     });
+
     test(
         'Given Counter class is instantiated when Increment is called and reset is called, then counter = 0',
         () {
