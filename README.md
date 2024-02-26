@@ -38,7 +38,7 @@ void main() {
   });
 }
 
-
+```
 ### 2. Given Counter class is incremented, when `incrementCount` is called, then count = 1
 
 - **Given:** An instance of the `Counter` class.
@@ -63,3 +63,4 @@ void main() {
     expect(counter.count, 1);
   });
 }
+```
