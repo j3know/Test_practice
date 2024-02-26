@@ -24,5 +24,12 @@ main() {
       counter.decrementCount();
       expect(counter.count, -1);
     });
+    test(
+        'Given Counter class is instantiated when Increment is called and reset is called, then counter = 0',
+        () {
+      counter.incrementCount();
+      counter.reset();
+      expect(counter.count, 0);
+    });
   });
 }
