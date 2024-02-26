@@ -2,22 +2,27 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fluttertestexample/counter.dart';
 
 main() {
-// Given When Then
+  // Given When Then
+  group('Counter class:', () {
+    late Counter counter;
+    setUp(() => counter = Counter());
 
-  test('Given Counter class, when instantiated then count = 0', () {
-    //arrange
-    Counter counter;
-    //act
-    counter = Counter();
-    int count = counter.count;
-    //assert
-    expect(count, 0);
-  });
-  test(
-      'Given Counter class is increment when increment is calles then count = 1',
-      () {
-    Counter counter = Counter();
-    counter.incrementCount();
-    expect(counter.count, 1);
+    test('Given Counter class, when instantiated then count = 0', () {
+      int count = counter.count;
+      expect(count, 0);
+    });
+    test(
+        'Given Counter class is increment when increment is calles then count = 1',
+        () {
+      counter.incrementCount();
+      expect(counter.count, 1);
+    });
+
+    test(
+        'Given Counter class is instantiated when dicrement count is called, then counter = -1',
+        () {
+      counter.decrementCount();
+      expect(counter.count, -1);
+    });
   });
 }
